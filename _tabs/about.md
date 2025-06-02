@@ -4,5 +4,13 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+"Port FreeBSD to QEMU microvm" is a Google Summer of Code (GSoC) project
+led by mentors [Tom Jones](mailto:thj@freebsd.org) and
+[Mehdi Mokhtari](mailto:mmokhi@freebsd.org) of the
+[FreeBSD](https://www.freebsd.org/) community. Its goal is to port the
+operating system to
+[QEMU microvm](https://www.qemu.org/docs/master/system/i386/microvm.html): a
+low dependency and lightweight virtual machine modeled after Amazon's
+[Firecracker](https://firecracker-microvm.github.io/). The project's
+motivation, as well as a detailed overview of the initial progress made by
+Tom Jones is documented at <https://adventurist.me/posts/00320>.
