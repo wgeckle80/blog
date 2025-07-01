@@ -25,7 +25,7 @@ project, and all of them but one from 2009 pertain to the microvm port.
 To more effectively view Git logs locally, Tom provided the following list of
 Git commands:
 
-```terminal
+```sh
 git log                      # show everything that has happened in the source tree chronologically
 git log .                    # show log for this directory
 git log --author="Tom Jones" # show Tom Jones' commits
