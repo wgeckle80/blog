@@ -45,7 +45,8 @@ things are properly configured. The PV clock driver implementation in FreeBSD is
 located at `sys/x86/x86/pvclock.c`.
 
 If it's at all helpful, we also noted that OpenBSD has a PV clock driver
-implementation. This may or may not be helpful in figuring out what PV clock
-is, as I currently don't know too much about it. Either way, if changing the
-configuration doesn't work right away, which it probably won't, I'll want to
-look more into what the PV clock actually is.
+implementation. A minimal manpage for the driver is located at
+<https://man.openbsd.org/pvclock.4>. This may or may not be helpful in
+figuring out what PV clock is, as I currently don't know too much about it.
+Either way, if changing the configuration doesn't work right away, which it
+probably won't, I'll want to look more into what the PV clock actually is.
