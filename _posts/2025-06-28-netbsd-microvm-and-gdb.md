@@ -113,7 +113,7 @@ startup command, as smolBSD's startup script is not sufficient for debugging.
 Instead of attempting to reverse engineer smolBSD's startup script,
 `sys/arch/amd64/conf/MICROVM` provides a good starting point.
 
-```terminal
+```sh
 qemu-system-x86_64                                                    \
       -M microvm,x-option-roms=off,rtc=on,acpi=off,pic=off,accel=kvm  \
       -m 256 -cpu host -kernel ${KERNEL}                              \
@@ -124,6 +124,7 @@ qemu-system-x86_64                                                    \
       -netdev user,id=net0,ipv6=off,hostfwd=::2200-:22                \
       -global virtio-mmio.force-legacy=false -serial stdio
 ```
+{: .nolineno }
 
 I took inspiration from the previous FreeBSD microvm script, in writing a new
 one, so the kernel and disk image are provided as two respective command line
@@ -159,6 +160,7 @@ exec("qemu-system-x86_64",
      "-serial", "stdio",
      "-s", "-S");
 ```
+{: file='microvm_debug.pl' }
 
 In adapting the script, the virtual accelerator needed to be removed, and the
 GDB flags needed to be added. Notably, NetBSD's native hypervisor, NVMM, cannot

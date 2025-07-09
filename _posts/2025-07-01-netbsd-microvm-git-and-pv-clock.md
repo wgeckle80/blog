@@ -34,6 +34,7 @@ git log -p                   # show a patch along with commit
 git show <commit>            # show log and changes for a commit
 git log <file>               # show all changes for a file
 ```
+{: .nolineno }
 
 
 ## PV Clock

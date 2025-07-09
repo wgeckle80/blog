@@ -31,7 +31,7 @@ The installation of other standard FreeBSD packages is described in
 
 The code for this project lives at
 <https://github.com/WGeckle80/freebsd-src/tree/microvm-port>. The custom kernel
-config `QEMUMICROVM` lives at `sys/amd64/conf/QEMUMICROVM`, which is currently
+config `MICROVM` lives at `sys/amd64/conf/MICROVM`, which is currently
 the same as the `FIRECRACKER` config with a line commented out. It will likely
 change over time to suit the port's needs. Since the output files of a kernel
 compilation are placed in `/usr/obj`, and it's not always ideal to compile the
@@ -42,14 +42,21 @@ to my main user with
 sudo chown <user> /usr/obj
 ```
 
+Alternatively, if the directory is intended to be written to by all users in
+the `wheel` group, one can simply add group write permissions.
+
+```terminal
+sudo chmod g+w /usr/obj
+```
+
 After this, a test compilation can be performed with
 
 ```terminal
-make -j 16 -s buildkernel KERNCONF=QEMUMICROVM TARGET=amd64
+make -j 16 -s buildkernel KERNCONF=MICROVM TARGET=amd64
 ```
 
 If successful, the file
-`/usr/obj/<path-to-cloned-repository>/amd64.amd64/sys/QEMUMICROVM/kernel`
+`/usr/obj/<path-to-cloned-repository>/amd64.amd64/sys/MICROVM/kernel`
 should exist. The kernel is compiled with debug symbols, so using GDB to
 debug a running QEMU instance is easy. When launching the host virtual
 machine, append `-s -S` to the other parameters, which initializes a GDB
@@ -84,6 +91,7 @@ deals with the following code in the `tsc_freq_cpuid_vm` function of
 		return (false);
 	do_cpuid(0x40000010, regs);
 ```
+{: file='sys/x86/x86/tsc.c' .nolineno }
 
 It was mentioned that "Skipping this check get us to the same
 `pvclock_get_timecount` fault as when we skipped the assert entirely", but it
@@ -106,6 +114,7 @@ struct init_ops xen_pvh_init_ops = {
 	.parse_memmap			= pvh_parse_memmap,
 };
 ```
+{: file='sys/x86/xen/pv.c' .nolineno }
 
 In `hammer_time_xen`, the `init_ops` initialization was changed to
 
@@ -117,6 +126,7 @@ In `hammer_time_xen`, the `init_ops` initialization was changed to
 	init_ops.parse_memmap = pvh_parse_memmap,
 #endif
 ```
+{: file='sys/x86/xen/pv.c' .nolineno }
 
 Finally, it wasn't clear to me where the file `test.raw` came from. I can at
 least get a working VM disk image similar to `test.raw` by downloading
@@ -154,6 +164,7 @@ qemu-system-x86_64 -M microvm                      \
     -device virtio-blk-device,drive=test           \
     -machine acpi=off
 ```
+{: file='microvm.sh' }
 
 It is invoked with
 
