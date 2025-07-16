@@ -1,8 +1,8 @@
 ---
 title: FreeBSD microvm Clocks
 date: 2025-07-09
-categories: [Blog]
-tags: [blog]
+categories: [Port FreeBSD to QEMU microvm]
+tags: [freebsd, microvm, pvclock, tsc, lapic, cpuid]
 ---
 
 This post discusses the current state of TSC and PV clock usage in the

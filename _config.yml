@@ -14,9 +14,9 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: FreeBSD microvm # the main title
+title: Wyatt Geckle # the main title
 
-tagline: GSoC project porting FreeBSD to QEMU microvm # it will display as the subtitle
+tagline: Computer Engineering + Math @ UMD # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   Documenting my journey porting FreeBSD to QEMU microvm.
@@ -150,7 +150,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "/freebsd-microvm-blog"
+baseurl: "/blog"
 
 # ------------ The following options are not recommended to be modified ------------------
 

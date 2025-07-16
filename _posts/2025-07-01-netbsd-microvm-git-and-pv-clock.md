@@ -1,8 +1,8 @@
 ---
 title: NetBSD microvm, Git, and PV Clock
 date: 2025-07-01
-categories: [Blog]
-tags: [blog]
+categories: [Port FreeBSD to QEMU microvm]
+tags: [netbsd, microvm, git, pvclock]
 ---
 
 Tom and I had a call today discussing commit history pertaining to the NetBSD

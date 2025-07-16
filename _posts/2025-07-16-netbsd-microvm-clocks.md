@@ -1,8 +1,8 @@
 ---
 title: NetBSD microvm Clocks
 date: 2025-07-16
-categories: [Blog]
-tags: [blog]
+categories: [Port FreeBSD to QEMU microvm]
+tags: [netbsd, microvm, pvclock, tsc, lapic]
 ---
 
 We explore the NetBSD source code to discover analysis starting points,

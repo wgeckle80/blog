@@ -1,12 +1,33 @@
 ---
-title: Initial Setup
+title: FreeBSD microvm Project Initial Setup
 date: 2025-06-11
-categories: [Blog]
-tags: [blog]
+categories: [Port FreeBSD to QEMU microvm]
+tags: [freebsd, ghostbsd, microvm]
 ---
 
-This post discusses relevant development environment information and initial
-progress on this project.
+This post discusses the project I'm working on this summer, relevant
+development environment information, and initial progress on this
+project.
+
+
+## Project Introduction
+
+[Port FreeBSD to QEMU microvm](https://wiki.freebsd.org/SummerOfCode2025Projects/PortFreeBSDToQEMUMicrovm)
+is a Google Summer of Code (GSoC) project led by mentors
+[Tom Jones](mailto:thj@freebsd.org) and
+[Mehdi Mokhtari](mailto:mmokhi@freebsd.org) of the
+[FreeBSD](https://www.freebsd.org/) community. Its goal is to port FreeBSD to
+[QEMU microvm](https://www.qemu.org/docs/master/system/i386/microvm.html): a
+low dependency and lightweight virtual machine modeled after Amazon's
+[Firecracker](https://firecracker-microvm.github.io/). The project's
+motivation, as well as a detailed overview of the initial progress made by
+Tom Jones is documented at <https://adventurist.me/posts/00320>.
+
+The original project proposal is located at
+<https://github.com/WGeckle80/freebsd-microvm-proposal/blob/main/GSoC_2025_FreeBSD_Proposal.pdf>.
+However, due to the scope of the project, as well as a misunderstanding of the
+main outcome of the port, this document is almost entirely outdated.
+Its inclusion in this introduction is for completeness.
 
 
 ## Development Environment

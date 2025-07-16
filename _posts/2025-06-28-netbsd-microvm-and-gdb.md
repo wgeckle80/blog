@@ -1,8 +1,8 @@
 ---
 title: NetBSD microvm and GDB
 date: 2025-06-28
-categories: [Blog]
-tags: [blog]
+categories: [Port FreeBSD to QEMU microvm]
+tags: [netbsd, smolbsd, microvm, gdb]
 ---
 
 Tom suggested to reference [NetBSD](https://www.netbsd.org/) for an
