@@ -15,7 +15,7 @@ project.
 [Port FreeBSD to QEMU microvm](https://wiki.freebsd.org/SummerOfCode2025Projects/PortFreeBSDToQEMUMicrovm)
 is a Google Summer of Code (GSoC) project led by mentors
 [Tom Jones](mailto:thj@freebsd.org) and
-[Mehdi Mokhtari](mailto:mmokhi@freebsd.org) of the
+[Mahdi Mokhtari](mailto:mmokhi@freebsd.org) of the
 [FreeBSD](https://www.freebsd.org/) community. Its goal is to port FreeBSD to
 [QEMU microvm](https://www.qemu.org/docs/master/system/i386/microvm.html): a
 low dependency and lightweight virtual machine modeled after Amazon's
