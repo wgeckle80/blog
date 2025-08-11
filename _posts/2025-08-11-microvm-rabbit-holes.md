@@ -433,10 +433,10 @@ step to take in this project is to get `tc_init` to trip.
 ## Firecracker Detour
 
 I created a psuedo-guide on how to debug Firecracker guests with GDB at
-<wgeckle80.github.io/blog/posts/firecracker-guest-debugging-with-gdb/>, as I
-was frustrated with the poor official documentation on the matter. My goal was
-to use FreeBSD's Firecracker port as another analysis vector. Unfortunately,
-the port is currently broken.
+<https://wgeckle80.github.io/blog/posts/firecracker-guest-debugging-with-gdb/>,
+as I was frustrated with the poor official documentation on the matter. My goal
+was to use FreeBSD's Firecracker port as another analysis vector.
+Unfortunately, the port is currently broken.
 
 ```terminal
 GDB: no debug ports present
