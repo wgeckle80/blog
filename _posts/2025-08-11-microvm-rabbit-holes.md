@@ -69,7 +69,7 @@ if int(gdb.parse_and_eval("$edx")) & (1 << LAPIC_PRESENT_BIT):
 else:
     print("Local APIC not present")
 ```
-{: .file='cpuid_lapic_presence.py' }
+{: file='cpuid_lapic_presence.py' }
 
 As expected, the local APIC is detected by `cpuid`.
 
@@ -114,7 +114,7 @@ while True:
     else:
         print("xAPIC mode")
 ```
-{: .file='x2apic_mode.py' }
+{: file='x2apic_mode.py' }
 
 This tells us immediately that we're in xAPIC mode, but there are way too many
 calls to `lapic_write32` to prove that we're always in xAPIC mode with this
@@ -144,7 +144,7 @@ try:
 except KeyboardInterrupt:
     print("Could not find an instance of being in x2APIC mode")
 ```
-{: .file='x2apic_mode.py' }
+{: file='x2apic_mode.py' }
 
 It takes awhile to get to the login screen, but eventually we get there
 without ever being in x2APIC mode. The NetBSD microvm port is seeming more
@@ -433,10 +433,10 @@ step to take in this project is to get `tc_init` to trip.
 ## Firecracker Detour
 
 I created a psuedo-guide on how to debug Firecracker guests with GDB at
-</posts/firecracker-guest-debugging-with-gdb/>, as I was frustrated with the
-poor official documentation on the matter. My goal was to use FreeBSD's
-Firecracker port as another analysis vector. Unfortunately, the port is
-currently broken.
+<wgeckle80.github.io/blog/posts/firecracker-guest-debugging-with-gdb/>, as I
+was frustrated with the poor official documentation on the matter. My goal was
+to use FreeBSD's Firecracker port as another analysis vector. Unfortunately,
+the port is currently broken.
 
 ```terminal
 GDB: no debug ports present
