@@ -2,7 +2,7 @@
 title: MicroVM Rabbit Holes
 date: 2025-08-11
 categories: [Port FreeBSD to QEMU microvm]
-tags: [x86, netbsd, microvm, lapic]
+tags: [x86, freebsd, netbsd, microvm, firecracker, lapic]
 ---
 
 This post describes a few of the rabbit holes I've been going down over the
